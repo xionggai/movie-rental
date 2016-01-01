@@ -19,4 +19,5 @@ zhangsan.addRental(rental)
 zhangsan.addRental(anotherRental)
 
 print(zhangsan.statement())
+print(zhangsan.HTMLStatement())
 

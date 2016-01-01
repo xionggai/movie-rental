@@ -22,7 +22,6 @@ class Customer: NSObject {
     }
     
     override var description: String {
-        
         get {
             var des: String = "Cutomer name is \(name):"
             for rental in rentals {
@@ -64,6 +63,18 @@ class Customer: NSObject {
         
         result += "Amount owned is \(totalCharge) \n"
         result += "You earned \(totalFrequentRenterPoints) frequent renter points"
+        
+        return result
+    }
+    
+    func HTMLStatement() -> String {
+        var result: String = "<h1>Rentals for <em>\(name)</em></h1><p>\n"
+        for rental in rentals {
+            result += "\(rental.movie.title): \(rental.charge) <br>\n"
+        }
+        
+        result += "<p>You owe <em>\(totalCharge) </em><p>\n"
+        result += "On this rental you earned <em>\(totalFrequentRenterPoints)</em> frequent renter points<p>"
         
         return result
     }
