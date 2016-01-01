@@ -23,33 +23,10 @@ class Rental: NSObject {
     }
     
     var charge: Double {
-        get {
-            var result: Double = 0
-            
-            switch (movie.priceCode) {
-            case .Regular:
-                result += 2
-                if (daysRented > 2) {
-                    result += (Double)(daysRented - 2) * 1.5
-                }
-            case .NewRelease:
-                result += (Double)(daysRented) * 3.0
-            case .Children :
-                result += 1.5
-                if (daysRented > 3) {
-                    result += (Double)(daysRented - 3) * 1.5
-                }
-            }
-            return result
-        }
+        return movie.getCharge(DaysRented: daysRented)
     }
     
     var frequentRenterPoints : Double {
-        get {
-            if movie.priceCode == .NewRelease && daysRented > 1 {
-                return 2
-            }
-            return 1
-        }
+        return movie.getFrequentRenterPoints(DaysRented: daysRented)
     }
 }
