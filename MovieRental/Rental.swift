@@ -43,4 +43,13 @@ class Rental: NSObject {
             return result
         }
     }
+    
+    var frequentRenterPoints : Double {
+        get {
+            if movie.priceCode == .NewRelease && daysRented > 1 {
+                return 2
+            }
+            return 1
+        }
+    }
 }

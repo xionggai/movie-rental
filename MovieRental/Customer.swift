@@ -37,17 +37,13 @@ class Customer: NSObject {
     func statement() -> String {
         
         var totalAmount: Double = 0
-        var frequentRenterPoints = 0
+        var frequentRenterPoints:Double = 0
         
         var result: String = "Rental Record for \(name) \n"
         
         for rental in rentals {
             
-            frequentRenterPoints++
-            if (rental.movie.priceCode == .NewRelease && rental.daysRented > 1) {
-                frequentRenterPoints++
-            }
-            
+            frequentRenterPoints += rental.frequentRenterPoints
             result += "\t \(rental.movie.title) \t \(rental.charge) \n"
             totalAmount += rental.charge
         }
