@@ -42,15 +42,14 @@ class Customer: NSObject {
         var result: String = "Rental Record for \(name) \n"
         
         for rental in rentals {
-            let thisAmount: Double = rental.charge
             
             frequentRenterPoints++
             if (rental.movie.priceCode == .NewRelease && rental.daysRented > 1) {
                 frequentRenterPoints++
             }
             
-            result += "\t \(rental.movie.title) \t \(thisAmount) \n"
-            totalAmount += thisAmount
+            result += "\t \(rental.movie.title) \t \(rental.charge) \n"
+            totalAmount += rental.charge
         }
         result += "Amount owned is \(totalAmount) \n"
         result += "You earned \(frequentRenterPoints) frequent renter points"
