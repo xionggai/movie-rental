@@ -21,4 +21,26 @@ class Rental: NSObject {
     override var description: String {
         return "Rental<movie: \(movie.description) rent days: \(daysRented)>"
     }
+    
+    var charge: Double {
+        get {
+            var result: Double = 0
+            
+            switch (movie.priceCode) {
+            case .Regular:
+                result += 2
+                if (daysRented > 2) {
+                    result += (Double)(daysRented - 2) * 1.5
+                }
+            case .NewRelease:
+                result += (Double)(daysRented) * 3.0
+            case .Children :
+                result += 1.5
+                if (daysRented > 3) {
+                    result += (Double)(daysRented - 3) * 1.5
+                }
+            }
+            return result
+        }
+    }
 }

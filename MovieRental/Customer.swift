@@ -42,11 +42,9 @@ class Customer: NSObject {
         var result: String = "Rental Record for \(name) \n"
         
         for rental in rentals {
-            
-            let thisAmount: Double = amountForEach(rental)
+            let thisAmount: Double = rental.charge
             
             frequentRenterPoints++
-            
             if (rental.movie.priceCode == .NewRelease && rental.daysRented > 1) {
                 frequentRenterPoints++
             }
@@ -57,28 +55,5 @@ class Customer: NSObject {
         result += "Amount owned is \(totalAmount) \n"
         result += "You earned \(frequentRenterPoints) frequent renter points"
         return result
-    }
-    
-    func amountForEach(aRental: Rental) -> Double {
-        
-        var result: Double = 0
-        
-        switch (aRental.movie.priceCode) {
-        case .Regular:
-            result += 2
-            if (aRental.daysRented > 2) {
-                result += (Double)(aRental.daysRented - 2) * 1.5
-            }
-        case .NewRelease:
-            result += (Double)(aRental.daysRented) * 3.0
-        case .Children :
-            result += 1.5
-            if (aRental.daysRented > 3) {
-                result += (Double)(aRental.daysRented - 3) * 1.5
-            }
-        }
-        
-        return result
-        
     }
 }
