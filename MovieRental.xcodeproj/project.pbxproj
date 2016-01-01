@@ -11,6 +11,10 @@
 		84B83CD61C36888B00B9EF7F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B83CD51C36888B00B9EF7F /* Movie.swift */; };
 		84B83CD81C36889A00B9EF7F /* Rental.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B83CD71C36889A00B9EF7F /* Rental.swift */; };
 		84B83CDA1C3688A900B9EF7F /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B83CD91C3688A900B9EF7F /* Customer.swift */; };
+		84B83CDC1C36937600B9EF7F /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B83CDB1C36937600B9EF7F /* Price.swift */; };
+		84B83CE01C3693D400B9EF7F /* ChildrenPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B83CDD1C3693D400B9EF7F /* ChildrenPrice.swift */; };
+		84B83CE11C3693D400B9EF7F /* RegularPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B83CDE1C3693D400B9EF7F /* RegularPrice.swift */; };
+		84B83CE21C3693D400B9EF7F /* NewReleasePrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B83CDF1C3693D400B9EF7F /* NewReleasePrice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +35,10 @@
 		84B83CD51C36888B00B9EF7F /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		84B83CD71C36889A00B9EF7F /* Rental.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rental.swift; sourceTree = "<group>"; };
 		84B83CD91C3688A900B9EF7F /* Customer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		84B83CDB1C36937600B9EF7F /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		84B83CDD1C3693D400B9EF7F /* ChildrenPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildrenPrice.swift; sourceTree = "<group>"; };
+		84B83CDE1C3693D400B9EF7F /* RegularPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularPrice.swift; sourceTree = "<group>"; };
+		84B83CDF1C3693D400B9EF7F /* NewReleasePrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewReleasePrice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,10 @@
 				84B83CD51C36888B00B9EF7F /* Movie.swift */,
 				84B83CD71C36889A00B9EF7F /* Rental.swift */,
 				84B83CD91C3688A900B9EF7F /* Customer.swift */,
+				84B83CDB1C36937600B9EF7F /* Price.swift */,
+				84B83CDD1C3693D400B9EF7F /* ChildrenPrice.swift */,
+				84B83CDE1C3693D400B9EF7F /* RegularPrice.swift */,
+				84B83CDF1C3693D400B9EF7F /* NewReleasePrice.swift */,
 			);
 			path = MovieRental;
 			sourceTree = "<group>";
@@ -128,9 +140,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B83CE01C3693D400B9EF7F /* ChildrenPrice.swift in Sources */,
+				84B83CDC1C36937600B9EF7F /* Price.swift in Sources */,
 				84B83CD61C36888B00B9EF7F /* Movie.swift in Sources */,
+				84B83CE11C3693D400B9EF7F /* RegularPrice.swift in Sources */,
 				84B83CCF1C36886000B9EF7F /* main.swift in Sources */,
 				84B83CD81C36889A00B9EF7F /* Rental.swift in Sources */,
+				84B83CE21C3693D400B9EF7F /* NewReleasePrice.swift in Sources */,
 				84B83CDA1C3688A900B9EF7F /* Customer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
